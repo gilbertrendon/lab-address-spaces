@@ -21,7 +21,29 @@ total        used        free      shared  buff/cache   available
 	
 	available: Esta columna indica la memoria disponible total del sistema.
 
-3. 
+3. Programa
+
+4.  ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?
+
+    R// Usando el comando kill(para terminar el proceso memory-user) en general las únicas columnas en las que se percibe cambio es en used, porque cuando se está ejecutando el código esta aumenta a comparación de cuando no,
+	la columna free aumenta cuando no se está ejecutando el código,	
+	la columna shared disminuye cuando se está ejecutando el código.
+	El uso de caché no se altera en gran medida pero disminuye un poco, en el caso 		el computador usado.
+	Finalmente la memoria disponible, lógicamente aumenta cuando no se está 	   ejecutando el código.
+
+5. El pmap se puede ejecutar para un solo proceso en particular o para varios, muestra en general información más detallada de cada proceso, muestra incluso direcciones en memoria y con este comando se puede ver la locacalización de cada componente(archivo, librería, etc.) que usa el proceso.
+
+6. 
+7. ¿Cuántas entidades diferentes conforman un espacio de direcciones moderno, a diferencia de nuestra simple concepción de code/stack/heap?
+
+Con -x podemos ver el como está mapeado el nombre de archivo, ejecutable, etc. Asociado al proceso que se está analizando, con -p se ve la ruta exacta del archivo que mencionábamos anteriormente cuando ejecutabamos el comando -x, finalmente excisten alternativas como -d por ejemplo y aquí la salida producida permite ver una nueva columna 'dispositivo' que se agrega en la salida, con -q si no quieres ver cosas como nombres de columna en la salida de pmap y en general cada diferente comando depende de lo que se quiera ver.
+
+
+
+
+
+
+
 
 
 
